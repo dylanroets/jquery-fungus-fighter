@@ -93,8 +93,10 @@ function deadShroom() {
 //Replace the `walk` class with a `jump` class on the freaky-fungus element, to make them jump for the glory of the fungal race.
 
 function gloryToShroom() {
-    if (attackAP<0) {
+    if (attackAP<=0) {
         $('.freaky-fungus').removeClass('walk')
         $('.freaky-fungus').addClass('jump')
+        $('.attack-btn').attr('disabled', true)
+
     }
 }
