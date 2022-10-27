@@ -55,12 +55,14 @@ function arcaneSceptreAttack() {
     fungusHP -= 14;
     renderAttackNumbers();
     deadShroom();
+    gloryToShroom();
 }
 function entangleAttack() {
     attackAP -= 23;
     fungusHP -= 9;
     renderAttackNumbers();
     deadShroom();
+    gloryToShroom();
 }
 
 function dragonBladeAttack() {
@@ -68,12 +70,14 @@ function dragonBladeAttack() {
     fungusHP -= 47;
     renderAttackNumbers();
     deadShroom();
+    gloryToShroom();
 }
 function starFireAttack() {
     attackAP -= 33;
     fungusHP -= 25;
     renderAttackNumbers();
     deadShroom();
+    gloryToShroom();
 }
 
 
@@ -84,5 +88,12 @@ function deadShroom() {
     if (fungusHP<0) {
         $('.freaky-fungus').removeClass('walk')
         $('.freaky-fungus').addClass('dead')
+    }
+}
+
+function gloryToShroom() {
+    if (attackAP<0) {
+        $('.freaky-fungus').removeClass('walk')
+        $('.freaky-fungus').addClass('jump')
     }
 }
