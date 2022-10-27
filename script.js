@@ -45,10 +45,8 @@ function renderAttackNumbers() {
     $('.ap-text').html(attackAP);
 }
 
-// function renderAttackBars() {
-//     $('#hp-meter').html(fungusHP);
-//     $('#ap-meter').html(attackAP);
-// }
+
+// functions with attacks
 
 function arcaneSceptreAttack() {
     attackAP -= 12;
@@ -90,6 +88,9 @@ function deadShroom() {
         $('.freaky-fungus').addClass('dead')
     }
 }
+
+//If you run out of AP, the monster wins and humanity is doomed 😢 
+//Replace the `walk` class with a `jump` class on the freaky-fungus element, to make them jump for the glory of the fungal race.
 
 function gloryToShroom() {
     if (attackAP<0) {
